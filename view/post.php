@@ -5,12 +5,12 @@ $ch = curl_init($url);
 
 //funcion para encriptar la informacion del formulario
 $data = array(
-    'nombre_cliente' => $_POST['nombre'],
-    'fecha_inicio' => $_POST['nombre'],
-    'lenguaje_programacion' => $_POST['nombre'],
-    'duracion_estimada' => $_POST['nombre'],
-    'proyect_manager' => $_POST['nombre'],
-    'observaciones' => $_POST['nombre'],
+    'nombre_cliente' => $_POST['nombre_cliente'],
+    'fecha_inicio' => $_POST['fecha_inicio'],
+    'lenguaje_programacion' => $_POST['lenguaje_programacion'],
+    'duracion_estimada' => $_POST['duracion_estimada'],
+    'proyect_manager' => $_POST['proyect_manager'],
+    'observaciones' => $_POST['observaciones'],
 );
 $payload = json_encode($data);
 //mostrar info encriptada
@@ -25,3 +25,4 @@ $result = curl_exec($ch);
 //cerrando la url
 curl_close($ch);
 echo $payload;
+?>
